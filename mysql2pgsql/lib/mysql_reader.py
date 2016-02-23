@@ -116,6 +116,8 @@ class MysqlReader(object):
                 return 'decimal'
             elif data_type.startswith('double'):
                 return 'double precision'
+            elif data_type.startswith('datetime(6)'):
+                return 'datetime'
             else:
                 return data_type
 
